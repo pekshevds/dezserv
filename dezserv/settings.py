@@ -26,7 +26,7 @@ SECRET_KEY = ')+4+(j)^c7-4-iu0ip1&@n$i)-#i&proj^k7&wys@0!bxt_=4%'
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['localhost', 'dizserv.ru', 'www.dizserv.ru']
+ALLOWED_HOSTS = ['localhost', 'dezserv.ru', 'www.dezserv.ru']
 
 
 # Application definition
