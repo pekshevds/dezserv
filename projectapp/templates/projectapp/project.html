@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!--====== PROJECTS PART START ======-->
+	
+    <section class="blog-page pt-115">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-md-8 col-sm-7">
+                    <div class="bdrop-section-title pb-30">
+                        <h6 class="sub-titler">Наши проекты</h6>
+                        <h3 class="main-title">{{ project.title }}</h3>
+                    </div> <!-- section title -->
+                </div>
+                
+            </div> <!-- row -->
+            <div class="row">
+
+            	{% for image in images %}
+            	<div class="col-lg-4 col-md-6">
+            		<div class="bdrop-single-news mt-30">
+            			<div class="bdrop-news-image">
+            				<img src="{{ image.images.url }}" alt="">
+            			</div>
+
+            		</div> <!-- single news -->
+            	</div>
+            	{% endfor %}
+
+            </div> <!-- row -->
+            <br>
+           
+
+            <div class="row">
+            	<div class="col-lg-12">
+            		<div class="blog-details-content pt-35">
+            			<p class="news-date">{{ project.date_of_completion }}</p>
+            			<p class="text">{{ project.description | linebreaks }}</p>
+            		</div> <!-- blog details content -->
+            	</div>
+            </div> <!-- row -->
+            
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PROJECTS PART ENDS ======-->
+{% endblock %}

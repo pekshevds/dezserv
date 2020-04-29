@@ -1,0 +1,298 @@
+
+
+
+/*===========================
+     14.FOOTER css 
+===========================*/
+
+
+.bdrop-footer-area{
+    background-color: $black;
+}
+
+.bdrop-footer-widgets{
+    & .f-title{
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+    }
+}
+
+.bdrop-footer-map{
+    & #contact-map{
+        width: 100%;
+        height: 210px;
+    }
+}
+
+.bdrop-footer-subscribe-text{
+    & .bdrop-subscribe-icon{
+        & i{
+            font-size: 70px;
+            line-height: 70px;
+            color: $theme-color;
+        }
+    }
+    & .bdrop-subscribe-content{
+        padding-left: 30px;
+        
+        & .sub-title{
+            font-size: 14px;
+            color: $theme-color;
+        }
+        & .subscribe-title{
+            font-size: 24px;
+            color: $white;
+            font-weight: 700;
+        }
+    }
+}
+
+
+.bdrop-footer-form{
+    position: relative;
+    & input{
+        width: 100%;
+        height: 70px;
+        padding-left: 30px;
+        padding-right: 90px;
+        color: $white;
+        font-size: 15px;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.15);
+        
+        @include placeholder{
+            opacity: 1;
+            color: $body-color;
+        }
+    }
+    & .main-btn{
+        font-size: 25px;
+        width: 80px;
+        height: 70px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+
+
+
+.bdrop-footer-link{
+    & ul{
+        & li{
+            margin-top: 20px;
+            
+            & a{
+                font-size: 15px;
+                color: $white;
+            }
+        }
+    }
+}
+
+.bdrop-footer-link-wrapper{
+    & ul{
+        width: 50%;
+    }
+}
+
+
+.bdrop-footer-logo-copyright{
+    border-top: 1px solid rgba(229, 229, 231, 0.1);
+}
+
+.bdrop-footer-menu{
+    & ul{
+        & li{
+            display: inline-block;
+            margin-left: 35px;
+            
+            &:first-child{
+                margin-left: 0;
+            }
+            
+            & a{
+                font-size: 15px;
+                font-family: $oswald;
+                color: $white;
+                font-weight: 500;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.bdrop-footer-logo{}
+
+.bdrop-footer-social{
+    & ul{
+        & li{
+            display: inline-block;
+            margin-right: 25px;
+            
+            &:last-child{
+                margin-right: 0;
+            }
+            
+            & a{
+                font-size: 15px;
+                color: $white;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.bdrop-footer-copyright{
+    padding-top: 17px;
+    
+    & .text{
+        color: $white;
+        
+        & a{
+            color: $theme-color;
+        }
+    }
+}
+
+
+/*===== BACK TO TOP =====*/
+
+.back-to-top{
+    font-size: 20px;
+    color: $white;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    border: 1px solid rgba(229, 229, 231, 0.1) ;
+    background-color: $black;
+    text-align: center;
+    z-index: 99;
+    @include transition(0.3s);
+    display: none;
+    
+    &:hover{
+        color: $white;
+        background-color: $theme-color;
+    }
+}
+
+
+
+
+/*===== FOOTER 3 =====*/
+
+
+.bdrop-footer-area-3{
+    @media #{$desktop} {
+        padding: 0 60px;
+    }
+}
+
+.bdrop-footer-widgets-3{
+    position: relative;
+    z-index: 9;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 34, 34, 0.95);
+        top: 0;
+        left: 0;
+    }
+    
+    & .f-title{
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+    }
+}
+
+
+.bdrop-footer-client{
+    & .bdrop-single-client-logo{
+        border-color: #373738;
+    }
+}
+
+
+.bdrop-footer-copyright-3{
+    & .bdrop-footer-logo-copyright{
+            border-top: 0;
+        }
+
+        .bdrop-footer-menu{
+            & ul{
+                & li{
+                    display: inline-block;
+                    margin-left: 35px;
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
+
+                    & a{
+                        color: $body-color;
+                        
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .bdrop-footer-social{
+            & ul{
+                & li{
+
+                    & a{
+                        color: $body-color;
+
+                        &:hover{
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        & .bdrop-footer-copyright{
+            padding-top: 17px;
+
+            & .text{
+                color: $body-color;
+
+                & a{
+                    color: $theme-color;
+                }
+            }
+        }
+}
+
+
+
+
+
+
+
+

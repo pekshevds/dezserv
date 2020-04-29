@@ -1,0 +1,257 @@
+/*===========================
+        05.ABOUT css 
+===========================*/
+
+
+
+.bdrop-about-area {}
+
+
+.bdrop-about-image {
+    padding-right: 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 90%;
+        height: 90%;
+        border: 10px solid $theme-color;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &.bdrop-about-image-2 {
+        &::after {
+            position: absolute;
+            content: '';
+            width: 40%;
+            height: 95%;
+            border: 10px solid $white;
+            background-color: rgba(255, 255, 255, 0.6);
+            right: 30px;
+            top: 0;
+            z-index: 5;
+        }
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & .bdrop-about-image-text {
+        font-size: 32px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 600;
+        background-color: #fff;
+        padding-right: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        position: absolute;
+        bottom: 122px;
+        right: -32px;
+        color: $black;
+        @include transform(rotate(-90deg));
+        z-index: 9;
+    }
+}
+
+.bdrop-about-content {
+    & .sub-title {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $opensans;
+        color: $theme-color;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+    }
+
+    & .bdrop-about-title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-top: 5px;
+        position: relative;
+
+        @media #{$xs} {
+            font-size: 24px;
+        }
+    }
+
+    & .dashed {
+        border-bottom: 1px dashed $body-color;
+        width: 145px;
+        padding-top: 30px;
+    }
+
+    & .text {
+        margin-top: 15px;
+    }
+}
+
+.bdrop-about-counter {
+    border-top: 1px solid $border-color;
+    margin-top: 70px;
+    padding-top: 20px;
+
+    @media #{$lg} {
+        margin-top: 30px;
+        padding-top: 0;
+    }
+
+    @media #{$xs} {
+        margin-top: 30px;
+        padding-top: 0;
+    }
+
+    & .bdrop-single-counter {
+        padding: 30px;
+        padding-right: 0;
+        position: relative;
+        z-index: 5;
+
+        @media #{$lg} {
+            padding: 17px 20px;
+            padding-right: 0;
+        }
+
+        @media #{$xs} {
+            padding: 17px 20px;
+            padding-right: 0;
+        }
+
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 75px;
+            height: 100%;
+            border: 5px solid $gray;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            @include transition(0.3s);
+
+            @media #{$xs} {
+                width: 60px;
+            }
+        }
+
+        & span {
+            font-size: 60px;
+            color: $black;
+            line-height: 60px;
+            font-family: $oswald;
+            font-weight: 700;
+
+            @media #{$lg} {
+                font-size: 50px;
+                line-height: 50px;
+            }
+
+            @media #{$xs} {
+                font-size: 44px;
+                line-height: 44px;
+            }
+        }
+
+        & .text {
+            margin-top: 5px;
+        }
+
+        &.active,
+        &:hover {
+            &::before {
+                border-color: $theme-color;
+            }
+        }
+    }
+}
+
+
+
+.bdrop-about-video-counter {
+    padding: 20px;
+    height: auto;
+    
+    @media #{$xs} {
+        padding: 10px;
+    }
+    
+    & .bdrop-about-video {
+        padding: 125px 0;
+        
+        & .bdrop-play-btn {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: $theme-color;
+            font-size: 20px;
+            color: $white;
+            position: relative;
+            line-height: 90px;
+            text-align: center;
+            @include transition(0.3s);
+
+            &:hover {
+                background-color: $theme-color-2;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 2px dashed $theme-color;
+                @include transform(scale(1.4));
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    & .bdrop-about-counter-3 {
+        background-color: $white;
+        padding: 0px 80px 30px;
+        margin-top: 0;
+        
+        @media #{$md} {
+            padding: 0px 40px 30px;
+        }
+        @media #{$xs} {
+            padding: 0px 30px 30px;
+        }
+    }
+}
+
+
+/*===== ABOUT 4 =====*/
+
+.bdrop-about-area-4{
+    position: relative;
+    z-index: 5;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 34, 34, 0.8);
+    }
+}
+
+.bdrop-about-counter-4{
+    & .bdrop-about-title {
+        color: $white;
+    }
+}
+
+
+
+
+
+

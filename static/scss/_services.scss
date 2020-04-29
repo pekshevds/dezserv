@@ -1,0 +1,126 @@
+
+
+
+/*===========================
+       07.SERVICES css 
+===========================*/
+
+
+.bdrop-services-area{}
+
+.bdrop-services-title{
+    & .main-title{
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.bdrop-single-services{
+    & .bdrop-services-image{
+        overflow: hidden;
+        & img{
+            width: 100%;
+            @include transition(0.3s);
+        }
+    }
+    & .bdrop-services-content{
+        padding-top: 20px;
+        
+        & .services-title{
+            & a{
+                font-size: 18px;
+                font-weight: 400;
+                color: $black;
+                @include transition(0.3s);
+
+                & i{
+                    margin-right: 15px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .text{
+            margin-top: 20px;
+        }
+    }
+    
+    &:hover{
+        & .bdrop-services-image{
+            & img{
+                @include transform(scale(1.2) rotate(5deg));
+            }
+        }
+    }
+}
+
+
+/*===== SERVICES 2 =====*/
+
+.bdrop-single-services-2{
+    border: 1px solid $border-color;
+    padding: 50px 30px;
+    position: relative;
+    @include transition(0.3s);
+    
+    &::before{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 50px solid $theme-color;
+        border-right: 50px solid transparent;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        @include transition(0.3s);
+    }
+    
+    & .bdrop-services-icon{
+        & i{
+            font-size: 50px;
+            color: $black;
+            line-height: 50px;
+        }
+    }
+    & .bdrop-services-content-2{
+        padding-top: 30px;
+        
+        & .bdrop-title{
+            & a{
+                color: $black;
+                font-size: 18px;
+                font-weight: 500;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .text{
+            padding-top: 20px;
+        }
+    }
+    
+    &:hover{
+        border-color: $theme-color;
+        
+        &::before{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

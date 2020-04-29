@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    
+    Дезинфекция
+
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="bdrop-what-we-do-area pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bdrop-what-we-title pb-25">
+                        <h3 class="main-title">Барыня. Да ведь как же? Полную дезинфекцию надо.</h3>
+                        <h7 class="sub-title">Толстой Л. Н., Плоды просвещения, 1890</h7>
+                    </div> <!-- what we title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-12 col-md-7">
+                    <div class="bdrop-single-what-we mt-30">
+                        <div class="bdrop-what-we-content">
+                            <h5 class="bdrop-what-title"><a href="{% url 'show_disinfection' %}">Дезинфекция.</a></h5>
+                            <p class="text">Проводится с целью уничтожения болезнетворных микроорганизмов, вирусов, патогенных грибов на путях передачи от источника инфекции к здоровому организму. Это комплексное уничтожение патогенных микроорганизмов, в жилых, административных, спортивных, медицинских, развлекательных, коммерческих и офисных помещениях.</p> 
+
+                            <p class="text">Использованием высокопродуктивных технологий нам удается полностью избавить здание от плесени, всех видов грибковых форм, бактерий, вирусов, хламидий, кокков, палочек и прочих опасных возбудителей трудноизлечимых патологий.</p>
+
+
+                            <p class="text">Дезинфекция – комплексное уничтожение патогенных микроорганизмов, в жилых, административных, спортивных, медицинских, развлекательных, коммерческих и офисных помещениях. Использованием высокопродуктивных технологий нам удается полностью избавить здание от плесени, всех видов грибковых форм, бактерий, вирусов, хламидий, кокков, палочек и прочих опасных возбудителей трудноизлечимых патологий.</p>
+                            <p class="text">С этой целью выполняется ряд мероприятий по ликвидации возбудителей инфекции больного человека и животных во внешней среде. Для этого используются специальные средства с низкой токсичностью и высоким эффектом. Ими обрабатываются все поверхности.</p>
+                            
+                        </div> <!-- what we content -->
+                    </div> <!-- single what we -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+<!--====== TESTIMONIAL PART START ======-->
+
+<section class="bdrop-testimonial-area pt-115">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="bdrop-section-title pb-60">
+                    <h6 class="sub-titler">Проекты по дезинфекции</h6>
+                    <h3 class="main-title">Последние проекты</h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row testimonial-active">
+            
+            {% for item in page_object %}
+            <div class="col-lg-4">
+                <div class="bdrop-single-testimonial bdrop-testimonial-2">
+                    <div class="bdrop-single-news mt-30">
+                        <div class="bdrop-news-image">
+                            {% if item.image %}
+                                <img src="{{ item.image.images.url }}" alt="">
+                            {% else %}
+                            <img src="{% static 'images/news-1.jpg' %}" alt="News">
+                            {% endif %}
+                        </div>
+                        <div class="bdrop-news-content">
+                            <span class="news-number">{{ forloop.counter }}</span>
+                            <p class="news-date">{{ item.project.date_of_completion }}</p>
+                            <h5 class="news-title"><a href="{% url 'show_project' slug=item.project.slug%}">{{ item.project.title }}</a></h5>
+                        </div>
+                    </div> <!-- single news -->
+                </div> <!-- single-testimonial -->
+            </div>
+            {% endfor %}
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== TESTIMONIAL PART ENDS ======-->
+{% endblock %}

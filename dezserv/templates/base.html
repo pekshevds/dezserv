@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>
+
+    	{% block title %}
+
+
+    	{% endblock %}
+    </title>
+    
+    {% load static %}
+
+    <!--====== Favicon Icon ======-->
+   	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <!--====== Flaticon css ======-->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+
+    <!--====== Slim Menu css ======-->
+    <link rel="stylesheet" href="{% static 'css/slimmenu.min.css' %}">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="{% static 'css/default.css' %}">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <header class="bdrop-header-area">
+
+    	<div class="bdrop-header-top d-none d-lg-block">
+            <div class="container">
+                <div class="header-top-contact d-flex justify-content-between">
+                    <div class="header-contact-text">
+                        <p class="text">Сделаем мир безопасней!</p>
+                    </div>
+                    <div class="header-contact-info">
+                        <p class="text"><i class="flaticon-email"></i> dezspecservice@gmail.com</p>
+                    </div>
+                    <div class="header-contact-info">
+                        <p class="text"><i class="flaticon-email"></i> +7 (920) 563 02 86</p>
+                    </div>
+                    
+                </div> <!-- header top contact -->
+            </div> <!-- container -->
+        </div> <!-- header-top -->
+
+        <div class="bdrop-navigation-area bdrop-navigation-one">
+            <div class="container-fluid">
+                <div class="row align-items-lg-center">
+                    <div class="col-lg-12">
+                        <div class="bdrop-navigation d-lg-flex justify-content-lg-between align-items-center">
+                            <div class="bdrop-logo text-center text-lg-left">
+                                <a href="{% url 'show_index' %}"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
+                            </div> <!-- logo -->
+
+                            <div class="bdrop-menu-wrapper">
+                                <nav id="mega-menu-holder" class="bdrop-menu-bar text-lg-center">
+                                    <ul class="bdrop-main-menu">
+    
+                                        {% if request.path == '/' %}
+                                        
+                                            <li><a class="active" href="{% url 'show_index' %}">Домой</a></li>
+                                        {% else %}
+
+                                            <li><a href="{% url 'show_index' %}">Домой</a></li>
+                                        {% endif %}
+
+                                        <li><a href="#">Услуги</a>
+                                        	<ul class="bdrop-sub-menu">
+                                        		<li><a href="{% url 'show_pesticide' %}">Дератизация</a></li>
+                                        		<li><a href="{% url 'show_disinfection' %}">Дезинфекция</a></li>
+                                        		<li><a href="{% url 'show_pestcontrol' %}">Дезинсекция</a></li>
+                                        		<li><a href="{% url 'show_aeration' %}">Газация</a></li>
+                                        	</ul>
+                                        </li>
+
+                                        {% if request.path == '/projects/' %}
+                                        
+                                            <li><a class="active" href="{% url 'show_projects' %}">Проекты</a></li>
+                                        {% else %}
+
+                                            <li><a href="{% url 'show_projects' %}">Проекты</a></li>
+                                        {% endif %}
+                                        
+                                        {% if request.path == '/about/' %}
+                                        
+                                            <li><a class="active" href="{% url 'show_about' %}">О нас</a></li>
+                                        {% else %}
+
+                                            <li><a href="{% url 'show_about' %}">О нас</a></li>
+                                        {% endif %}
+
+                                        {% if request.path == '/contacts/' %}
+                                            
+                                            <li><a class="active" href="{% url 'show_contacts' %}">Контакты</a></li>
+                                        {% else %}
+
+                                            <li><a href="{% url 'show_contacts' %}">Контакты</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </nav> <!-- menu bar -->
+                            </div> <!-- menu wrapper -->
+
+                            <div class="bdrop-navigation-btn-icon d-flex align-items-center justify-content-end">
+                                
+                            </div> <!-- navigation btn icon -->
+
+                        </div> <!-- navigation -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navigation area -->
+    </header>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <br>
+    <br>
+    <hr>
+    {% block content %}
+
+
+    {% endblock %}
+    <br>
+    <!--====== FOOTER PART START ======-->
+
+    <footer class="bdrop-footer-area">
+        <div class="container">
+            
+
+            <div class="bdrop-footer-logo-copyright pt-40 pb-50">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 order-0 order-lg-0">
+                        <div class="bdrop-footer-menu text-center text-md-left mt-25">
+                            <ul>
+                                <li><a href="{% url 'show_index' %}">Домой</a></li>
+                                <li><a href="{% url 'show_projects' %}">Проекты</a></li>
+                            </ul>
+                        </div> <!-- footer menu -->
+                    </div>
+                    <div class="col-lg-4 col-md-12 order-2 order-lg-1">
+                        <div class="bdrop-footer-logo text-center mt-30">
+                            <a href="{% url 'show_index' %}">
+                                <img src="{% static 'images/logo-2.png' %}" alt="Logo">
+                            </a>
+                        </div> <!-- footer logo -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 order-1 order-lg-2">
+                        <div class="bdrop-footer-menu text-center  text-md-right mt-25">
+                            <ul>
+                                <!-- <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                                <li><a href="{% url 'show_about' %}">О нас</a></li>
+                                <li><a href="{% url 'show_contacts' %}">Контакты</a></li>
+                            </ul>
+                        </div> <!-- footer social -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bdrop-footer-copyright text-center">
+                            <p class="text">&copy; 2020 <a href="{% url 'show_index' %}">dezserv.ru</a> All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer logo copyright -->
+        </div> <!-- container -->
+    </footer>
+
+
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    <!--====== PART START ======-->
+
+    <!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+
+    <!--====== PART ENDS ======-->
+
+    <!-- row -->
+
+
+
+
+
+
+
+
+
+
+    <!--====== jquery js ======-->
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+
+    <!--====== Slim Menu js ======-->
+    <script src="{% static 'js/jquery.slimmenu.min.js' %}"></script>
+
+    <!--====== Slick js ======-->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+    <!--====== Ajax Contact js ======-->
+    <script src="{% static 'js/ajax-contact.js' %}"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+
+    <!--====== Validator js ======-->
+    <script src="{% static 'js/validator.min.js' %}"></script>
+
+    <!--====== Main js ======-->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="{% static 'js/map-script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+	
+<section class="bdrop-what-we-do-area pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bdrop-what-we-title pb-25">
+                        <h3 class="main-title">Сделаем мир безопасней!</h3>
+                        <h6 class="sub-title">Наша миссия</h6>
+                    </div> <!-- what we title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-7">
+                    <div class="bdrop-single-what-we mt-30">
+                        <div class="bdrop-what-we-content">
+                            <h5 class="bdrop-what-title"><a href="{% url 'show_pesticide' %}">Дератизация.</a></h5>
+                            <p class="text">Сотрудники компании проводят обследование объекта и прилегающую к ним территорию, природных и антр...</p>
+                            <a href="{% url 'show_pesticide' %}" class="more">Подробнее... <i class="flaticon-right-arrow"></i></a>
+                        </div> <!-- what we content -->
+                    </div> <!-- single what we -->
+                </div>
+                <div class="col-lg-3 col-md-7">
+                    <div class="bdrop-single-what-we mt-30">
+                        <div class="bdrop-what-we-content">
+                            <h5 class="bdrop-what-title"><a href="{% url 'show_disinfection' %}">Дезинфекция.</a></h5>
+                            <p class="text">Проводится с целью уничтожения болезнетворных микроорганизмов, вирусов, патогенных грибов на путях...</p>
+                            <a href="{% url 'show_disinfection' %}" class="more">Подробнее... <i class="flaticon-right-arrow"></i></a>
+                        </div> <!-- what we content -->
+                    </div> <!-- single what we -->
+                </div>
+                <div class="col-lg-3 col-md-7">
+                    <div class="bdrop-single-what-we mt-30">
+                        <div class="bdrop-what-we-content">
+                            <h5 class="bdrop-what-title"><a href="{% url 'show_pestcontrol' %}">Дезинсекция.</a></h5>
+                            <p class="text">Мы производим обследование объекта на наличие вредителей, осматриваем вентиляционные установки, ис...</p>
+                            <a href="{% url 'show_pestcontrol' %}" class="more">Подробнее... <i class="flaticon-right-arrow"></i></a>
+                        </div> <!-- what we content -->
+                    </div> <!-- single what we -->
+                </div>
+                <div class="col-lg-3 col-md-7">
+                    <div class="bdrop-single-what-we mt-30">
+                        <div class="bdrop-what-we-content">
+                            <h5 class="bdrop-what-title"><a href="{% url 'show_aeration' %}">Газация.</a></h5>
+                            <p class="text">Комплекс мероприятий, основанный на применении специального газораспылительног...</p>
+                            <a href="{% url 'show_aeration' %}" class="more">Подробнее... <i class="flaticon-right-arrow"></i></a>
+                        </div> <!-- what we content -->
+                    </div> <!-- single what we -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+
+{% endblock %}
+

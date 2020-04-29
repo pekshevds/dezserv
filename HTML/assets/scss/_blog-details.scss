@@ -1,0 +1,238 @@
+/*===========================
+    18.BLOG DETAILS css 
+===========================*/
+
+.blog-details-area {}
+
+
+.blog-details-image{
+    & img{
+        width: 100%;
+    }
+}
+
+.blog-details-content {
+    & .blog-details-title {
+        & .title {
+            font-size: 24px;
+            margin-top: 20px;
+
+            @media #{$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+    
+    & .blog-details-content{
+        & ul{
+            & li{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $body-color;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    & .blockquote{
+        background-color: $theme-color;
+        padding: 40px 50px;
+        border-radius: 5px;
+        margin-bottom: 0;
+        
+        @media #{$xs}{
+            padding: 10px 15px;
+        }
+        
+        & .text{
+            color: $white;
+            font-size: 24px;
+            line-height: 45px;
+            font-style: italic;
+            
+            @media #{$xs}{
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+    }
+    
+    & .blog-details-share{
+        border-top: 1px solid $border-color;
+        
+        & span{
+            font-size: 15px;
+            font-weight: 700;
+            color: $theme-color;
+        }
+        & .social{
+            & li{
+                display: inline-block;
+                margin-left: 10px;
+                               
+                & a{
+                    font-size: 16px; 
+                }
+                
+                &:nth-of-type(1){
+                    & a{
+                        color: #3b5998;
+                    }
+                }
+                &:nth-of-type(2){
+                    & a{
+                        color: #b9a3e3;
+                    }
+                }
+                &:nth-of-type(3){
+                    & a{
+                        color: #0e76a8;
+                    }
+                }
+                &:nth-of-type(4){
+                    & a{
+                        color: #c8232c;
+                    }
+                }
+                &:nth-of-type(5){
+                    & a{
+                        color: #3f729b;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.blog-details-comment{
+     & .comment-title{
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}
+
+.blog-comment{
+       
+    & .comment-replay{
+        padding-left: 100px;
+        
+        @media #{$xs}{
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            padding-left: 60px;
+        }
+    }
+}
+.single-comment{
+    padding: 20px 25px;
+    padding-left: 0;
+    border: 1px solid $border-color;
+    margin-left: 40px;
+    border-radius: 5px;
+    margin-top: 30px;
+    
+    @media #{$xs}{
+        margin-left: 0;
+        padding-top: 0;
+        margin-top: 70px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    @media #{$sm}{
+        margin-left: 40px;
+        padding-top: 0;
+        margin-top: 30px;
+        padding: 20px 25px;
+        padding-left: 0;
+    }
+    
+    & .comment-author{
+        margin-left: -40px;
+        
+        @media #{$xs}{
+            margin-left: 0;
+            text-align: center;
+            margin-top: -40px;
+        }
+        @media #{$sm}{
+            margin-left: -40px;
+            margin-top: 0;
+        }
+        
+        & img{
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+    & .comment-text{
+        padding-left: 25px;
+        
+        @media #{$xs}{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        @media #{$sm}{
+            padding-top: 0;
+            padding-left: 25px;
+        }
+        
+        & .author-name{
+            font-size: 16px;
+        }
+        & .text{
+            margin-top: 10px;
+        }
+        & .meta{
+            & li{
+                display: inline-block;
+                margin-top: 10px;
+                
+                & + li{
+                    margin-left: 30px;
+                    
+                    @media #{$xs}{
+                        margin-left: 15px;
+                    }
+                    @media #{$sm}{
+                        margin-left: 25px;
+                    }
+                }
+                
+                & a{
+                    font-size: 14px;
+                    color: $body-color;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

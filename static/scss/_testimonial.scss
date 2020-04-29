@@ -1,0 +1,225 @@
+
+
+
+/*===========================
+      09.TESTIMONIAL css 
+===========================*/
+
+
+
+.bdrop-single-testimonial{
+    position: relative;
+    
+    & .bdrop-testimonial-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 70px;
+        
+        @media #{$xs}{
+            position: relative;
+            padding-top: 0;
+            padding-left: 70px;
+            padding-bottom: 10px;
+        }
+        
+        & img{
+            width: 100px;
+            border-radius: 50%;
+            
+            @media #{$xs} {
+                width: 70px;
+            }
+        }
+    }
+    & .bdrop-testimonial-content{
+        background-color: $white;
+        margin-left: 130px;
+        position: relative;
+        
+        @media #{$xs}{
+            margin-left: 0;
+        }
+        
+        &::before{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 100px solid $white;
+            border-left: 100px solid transparent;
+            top: 0;
+            left: -100px;
+            
+            @media #{$xs}{
+                border-top: 0;
+                border-left: 0;
+                border-bottom: 70px solid $white;
+                border-right: 70px solid transparent;
+                left: 0;
+                top: -70px;
+            }
+        }        
+                
+        & .bdrop-testimonial-text{
+            padding: 40px 45px;
+            
+            @media #{$lg} {
+                padding: 25px 30px;
+            }  
+            @media #{$xs} {
+                padding: 15px 20px;
+            }  
+            @media #{$sm} {
+                padding: 25px 30px;
+            }            
+            
+            & .testimonial-text{
+                font-size: 32px;
+                font-weight: 400;
+                
+                @media #{$lg} {
+                    font-size: 26px;
+                }
+                @media #{$xs} {
+                    font-size: 20px;
+                }
+                @media #{$sm} {
+                    font-size: 28px;
+                }
+            }
+        }
+        & .bdrop-testimonial-meta{
+            padding: 20px 45px;
+            border-top: 2px solid #e5e5e5;
+            
+            @media #{$lg} {
+                padding: 20px 30px;
+            }
+            
+            @media #{$xs} {
+                padding: 10px 20px;
+            }
+            @media #{$sm} {
+                padding: 15px 30px;
+            }
+            
+            & .author-name{
+                font-size: 16px;
+                font-weight: 700;
+                color: $theme-color;
+                font-family: $opensans;
+                
+                @media #{$xs} {
+                    font-size: 15px;
+                }
+            }
+            & .author-title{
+                font-size: 15px;
+                color: $body-color;
+                
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    &.bdrop-testimonial-2{
+        & .bdrop-testimonial-content{
+            background-color: $gray;
+            
+            &::before{
+                border-top-color: $gray;
+                
+                @media #{$xs}{
+                    border-bottom: 70px solid $gray;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-active {
+    & .slick-arrow{
+        position: absolute;
+        top: -80px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $black;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+    
+    & .slick-dots{
+        text-align: center;
+        
+        & li{
+            line-height: 15px;
+            display: inline-block;
+            margin: 0 3px;
+            margin-top: 50px;
+            
+            & button{
+                font-size: 0;
+                padding: 0;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $theme-color;
+                border: 0;
+                position: relative;
+                
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    top: 1px;
+                    left: 1px;
+                    border-radius: 50%;
+                    background: none;
+                    border: 2px solid $white;
+                    opacity: 0;
+                    @include transition(0.3s);
+                }
+            }
+            
+            &.slick-active {
+                & button{
+                    &::before{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

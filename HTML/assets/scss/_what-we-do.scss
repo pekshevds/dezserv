@@ -1,0 +1,113 @@
+
+
+
+/*===========================
+      04.WHAT WE DO css 
+===========================*/
+
+
+.bdrop-what-we-do-area{}
+
+.bdrop-what-we-title{
+    & .sub-title{
+        font-size: 14px;
+        color: $body-color;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: $opensans;
+    }
+    & .main-title{
+        font-size: 32px;
+        font-weight: 400;
+        margin-top: 8px;
+        
+        @media #{$xs}{
+            font-size: 24px;
+        }
+    }
+}
+
+
+.bdrop-single-what-we{
+    
+    & .bdrop-what-we-image{
+        & img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    
+    & .bdrop-what-we-content{
+        & .bdrop-what-title{
+            & a{
+                font-size: 18px;
+                font-weight: 700;
+                font-family: $opensans;
+                color: $black;
+                @include transition(0.3s);
+                
+
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .text{
+            margin-top: 20px;
+        }
+        & .more{
+            margin-top: 35px;
+            font-size: 15px;
+            color: $body-color;
+            @include transition(0.3s);
+            font-weight: 600;
+
+            & i{
+                margin-left: 5px;
+            }
+
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+.bdrop-what-we-do-active{
+    & .slick-arrow{
+        position: absolute;
+        top: -70px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $black;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        @media #{$xs}{
+            top: -15px;
+        }
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+

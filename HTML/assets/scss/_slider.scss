@@ -1,0 +1,611 @@
+/*===========================
+       03.SLIDER css 
+===========================*/
+
+.bdrop-slider-area {
+    position: relative;
+}
+
+
+.bdrop-slider-text {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+
+    @media #{$xs} {
+        bottom: 40px;
+    }
+
+    & .text {
+        font-size: 72px;
+        font-weight: 700;
+        color: $white;
+        opacity: 0.2;
+        
+        @media #{$md}{
+            font-size: 40px;
+        }
+        
+        @media #{$xs} {
+            font-size: 32px;
+        }
+    }
+}
+
+.bdrop-slider-video {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    @include transform(rotate(-90deg));
+
+    & a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $theme-color;
+        font-size: 20px;
+        color: $white;
+        position: relative;
+        line-height: 50px;
+        text-align: center;
+        @include transition(0.3s);
+
+        &:hover {
+            background-color: $theme-color-2;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px dashed $body-color;
+            @include transform(scale(1.3));
+            left: 0;
+            top: 0;
+        }
+    }
+
+    & span {
+        font-size: 14px;
+        color: $body-color;
+        font-family: $oswald;
+        margin-left: 12px;
+    }
+
+    &.bdrop-slider-video-2 {
+        & a {
+            color: $white;
+
+            &::before {
+                border-color: $white;
+            }
+        }
+
+        & span {
+            color: $white;
+        }
+    }
+}
+
+.slider-counter {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    @include transform(translateX(-50%));
+
+    @media #{$md} {
+        bottom: 40px;
+    }
+    @media #{$xs} {
+        bottom: 40px;
+    }
+
+    & span {
+        color: $body-color;
+        font-family: $oswald;
+        margin: 0 5px;
+
+        &.current-slide {
+            color: $theme-color;
+            font-size: 70px;
+
+            @media #{$md} {
+                font-size: 54px;
+            }
+            @media #{$xs} {
+                font-size: 48px;
+            }
+        }
+
+        &.total-slide {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '/';
+                top: 0;
+                left: -8px;
+
+            }
+        }
+    }
+}
+
+
+.bdrop-slider-wrapper {}
+
+.slider-active {
+    & .slick-dots {
+        position: absolute;
+        top: 50%;
+        right: 70px;
+        @include transform(translateY(-50%));
+
+        & li {
+            line-height: 13px;
+
+            & button {
+                font-size: 0;
+                padding: 0;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $white;
+                border: 0;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    top: 1px;
+                    left: 1px;
+                    border-radius: 50%;
+                    background: none;
+                    border: 2px solid $theme-color;
+                    opacity: 0;
+                    @include transition(0.3s);
+                }
+            }
+
+            &.slick-active {
+                & button {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bdrop-single-slider {
+    height: 750px;
+
+    @media #{$desktop} {
+        height: 900px;
+    }
+
+    @media #{$md} {
+        height: 650px;
+    }
+    @media #{$xs} {
+        height: 550px;
+    }
+
+    &.bdrop-slider-2 {
+        z-index: 5;
+        position: relative;
+        
+        @media #{$md} {
+            height: 750px;
+        }
+        @media #{$xs} {
+            height: 650px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+    }
+    
+    &.bdrop-single-3{
+        z-index: 5;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/header-line.png);
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+        }
+    }
+    
+    &.bdrop-single-4{
+        z-index: 5;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+    }
+}
+
+.bdrop-slider-content {
+    padding-top: 110px;
+
+    @media #{$md} {
+        padding-top: 40px;
+    }
+    @media #{$xs} {
+        padding-top: 40px;
+    }
+
+    & .sub-title {
+        font-size: 18px;
+        font-family: $opensans;
+        color: $body-color;
+        font-weight: 400;
+    }
+
+    & .slider-title {
+        font-size: 72px;
+        margin-top: 5px;
+
+        @media #{$lg} {
+            font-size: 58px;
+        }
+
+        @media #{$md} {
+            font-size: 58px;
+        }
+
+        @media #{$xs} {
+            font-size: 28px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+    }
+
+    & .text {
+        padding-top: 35px;
+        
+        @media #{$xs} {
+            padding-top: 25px;
+        }
+    }
+
+    & .main-btn {
+        margin-top: 60px;
+
+        @media #{$xs} {
+            margin-top: 40px;
+        }
+    }
+
+    &.bdrop-slider-content-2 {
+        & .sub-title {
+            color: $white;
+        }
+
+        & .slider-title {
+            color: $white;
+        }
+
+        & .text {
+            color: $white;
+        }
+
+        & .bdrop-slider-phone {
+            margin-top: 45px;
+            
+            @media #{$xs}{
+                margin-top: 30px;
+            }
+
+            & .bdrop-phone-icon {
+                & i {
+                    font-size: 52px;
+                    color: $white;
+                    width: 115px;
+                    height: 115px;
+                    line-height: 115px;
+                    background-color: $theme-color-2;
+                    text-align: center;
+
+                    @media #{$lg} {
+                        width: 90px;
+                        height: 90px;
+                        line-height: 90px;
+                        font-size: 32px;
+                    }
+                    @media #{$md} {
+                        width: 90px;
+                        height: 90px;
+                        line-height: 90px;
+                        font-size: 32px;
+                    }
+                    @media #{$xs} {
+                        width: 60px;
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 28px;
+                    }
+                    @media #{$sm} {
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        font-size: 28px;
+                    }
+                }
+            }
+
+            & .bdrop-phone-content {
+                background-color: $theme-color;
+                padding: 25px;
+                height: 115px;
+                max-width: 350px;
+
+                @media #{$lg} {
+                    height: 90px;
+                    padding: 14px 25px;
+                    max-width: 270px;
+                }
+                @media #{$md} {
+                    height: 90px;
+                    padding: 14px 25px;
+                    max-width: 280px;
+                }
+                @media #{$xs} {
+                    padding: 3px 15px;
+                    height: 60px;
+                }
+                @media #{$sm} {
+                    padding: 3px 15px;
+                    height: 70px;
+                    max-width: 250px;
+                }
+
+                & .text {
+                    color: $white;
+                    margin-top: 0;
+                    padding-top: 0;
+
+                    @media #{$xs} {
+                        font-size: 14px;
+                    }
+                }
+
+                & .number {
+                    font-size: 32px;
+                    color: $white;
+                    font-family: $oswald;
+                    font-weight: 700;
+
+                    @media #{$lg} {
+                        font-size: 26px;
+                    }
+                    @media #{$xs} {
+                        font-size: 20px;
+                    }
+
+                    @media #{$sm} {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bdrop-slider-hero{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+
+    & .bdrop-hero-image{
+
+        & img{}
+    }
+}
+
+
+/*===== SLIDER 3 =====*/
+
+.bdrop-slider-area-3{
+    @media #{$desktop} {
+        padding: 0 60px;
+    }
+    
+    & .slider-active {
+        & .slick-dots {
+            top: auto;
+            right: auto;
+            left: 50%;
+            @include transform(translateX(-50%));
+            bottom: 50px;
+
+            & li {
+                display: inline-block;
+                margin: 0 4px;
+            }
+        }
+    }
+    
+    
+    & .bdrop-slider-content {
+        max-width: 680px;
+        width: 100%;
+        
+        & .sub-title {
+            color: $white;
+        }
+
+        & .slider-title {
+            color: $white;
+            display: inline-block;
+            text-decoration: underline $theme-color;
+        }
+
+        & .text {
+            color: $white;
+        }
+        
+        & .slider-btn-3{
+            font-size: 18px;
+            color: $white;
+            font-family: $oswald;
+            margin-top: 70px;
+            
+            & i{
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 12px;
+                color: $white;
+                background-color: $theme-color;
+                border-radius: 50%;
+                text-align: center;
+                margin-right: 8px;
+                @include transition(0.3s);
+            }
+            
+            &:hover{
+                & i{
+                    background-color: $theme-color-2;
+                }
+            }
+        }
+    }    
+    
+    & .bdrop-slider-text {
+        position: absolute;
+        bottom: auto;
+        right: auto;
+        top: 335px;
+        left: -80px;
+        @include transform(rotate(-90deg));
+        
+    }
+}
+
+
+/*===== SLIDER 4 =====*/
+
+.bdrop-slider-area-4{    
+    & .slider-active {
+        & .slick-dots {
+            top: auto;
+            right: auto;
+            left: 50%;
+            @include transform(translateX(-50%));
+            bottom: 50px;
+
+            & li {
+                display: inline-block;
+                margin: 0 4px;
+            }
+        }
+    }
+    
+    
+    & .bdrop-slider-content {
+        max-width: 680px;
+        width: 100%;
+        
+        & .sub-title {
+            color: $theme-color;
+        }
+
+        & .slider-title {
+            color: $white;
+        }
+
+        & .text {
+            color: $white;
+        }
+        
+        & .slider-btn-3{
+            font-size: 18px;
+            color: $white;
+            font-family: $oswald;
+            margin-top: 70px;
+            
+            & i{
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 12px;
+                color: $white;
+                background-color: $theme-color;
+                border-radius: 50%;
+                text-align: center;
+                margin-right: 8px;
+                @include transition(0.3s);
+            }
+            
+            &:hover{
+                & i{
+                    background-color: $theme-color-2;
+                }
+            }
+        }
+    }    
+    
+    & .bdrop-slider-text {
+        position: absolute;
+        bottom: auto;
+        right: auto;
+        top: 335px;
+        left: -80px;
+        @include transform(rotate(-90deg));
+        
+    }
+}
+
+
+
+
+
+
+
+

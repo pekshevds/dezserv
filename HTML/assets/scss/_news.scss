@@ -1,0 +1,95 @@
+
+
+
+/*===========================
+        11.NEWS css 
+===========================*/
+
+
+.bdrop-news-area{}
+
+.bdrop-single-news{
+    & .bdrop-news-image{
+        & img{
+            width: 100%;
+        }
+    }
+    
+    & .bdrop-news-content{
+        position: relative;
+        padding: 0 20px;
+        margin-top: 20px;
+        
+        & .news-number{
+            font-size: 72px;
+            color: rgba(0, 0, 0, 0.1);
+            line-height: 65px;
+            font-family: $oswald;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        & .news-date{
+            margin-top: 15px;
+            background-color: $white;
+            font-size: 14px;
+            color: $body-color;
+            display: inline-block;
+            position: relative;
+            z-index: 5;
+            margin-top: 25px;
+        }
+        & .news-title{
+            & a{
+                position: relative;
+                z-index: 5;
+                font-size: 16px;
+                font-weight: 500;
+                color: $black;
+                @include transition(0.3s);
+                margin-top: 15px;
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.news-active{
+    & .slick-arrow{
+        position: absolute;
+        top: -80px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $black;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+
+
+

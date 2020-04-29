@@ -1,0 +1,627 @@
+/*===========================
+     02.HEADER css 
+===========================*/
+
+.bdrop-header-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+
+/*===== Navigation ======*/
+
+.bdrop-header-top {
+    background-color: $black;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background-color: $theme-color;
+        z-index: -1;
+    }
+}
+
+.header-top-contact {
+    & .header-contact-text {
+        background-color: $theme-color;
+        display: inline-block;
+        padding-right: 50px;
+
+        & .text {
+            font-size: 14px;
+            color: $white;
+            font-family: $oswald;
+            line-height: 65px
+        }
+    }
+}
+
+.header-contact-info {
+    & .text {
+        font-size: 15px;
+        color: $white;
+        line-height: 60px;
+
+        & i {
+            font-size: 26px;
+            margin-right: 8px;
+        }
+    }
+}
+
+.header-contact-btn {
+    & .main-btn {
+        background-color: #171717;
+    }
+}
+
+
+
+/*===== Navigation ======*/
+
+.bdrop-navigation-area {
+    background-color: $white;
+    @include transition(0.3s);
+
+    @media #{$md} {
+        padding: 10px 0;
+    }
+
+    @media #{$xs} {
+        padding: 10px 0;
+    }
+
+    &.bdrop-navigation-one {
+        @media #{$desktop} {
+            padding-left: 185px;
+            padding-right: 185px;
+        }
+
+        @media #{$laptop} {
+            padding-left: 85px;
+            padding-right: 85px;
+        }
+    }
+
+    &.bdrop-navigation-transparent {
+        background-color: transparent;
+    }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: $white;
+        @include box-shadow (0px 5px 20px 0px rgba(0, 0, 0, 0.05));
+        @include transition(0.3s);
+    }
+}
+
+
+
+
+.bdrop-navigation {
+    position: relative;
+
+    & .bdrop-logo {
+
+        @media #{$md} {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+
+        @media #{$xs} {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+
+    & .bdrop-menu-wrapper {
+
+        & .menu-collapser {
+            background: none;
+            margin: 10px 0;
+
+            & .collapse-button {
+                padding: 0;
+                background: none;
+                right: auto;
+                left: 0;
+
+                & .icon-bar {
+                    width: 28px;
+                    margin: 5px 0;
+                    background-color: $black;
+                }
+            }
+        }
+
+        & .bdrop-menu-bar {
+            @media #{$md} {
+                position: absolute;
+                top: 140%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+            }
+
+            @media #{$xs} {
+                position: absolute;
+                top: 140%;
+                left: 0;
+                width: 100%;
+                background-color: $white;
+            }
+        }
+    }
+
+    & .bdrop-navigation-btn-icon {
+        @media #{$md} {
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            right: 0;
+            @include transform(translateY(-50%));
+        }
+
+        @media #{$xs} {
+            position: absolute;
+            z-index: 99;
+            top: 50%;
+            right: 0;
+            @include transform(translateY(-50%));
+        }
+    }
+}
+
+
+
+
+
+.bdrop-menu-bar {
+
+    & .bdrop-main-menu {
+
+        @media #{$md} {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        @media #{$xs} {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        & li {
+            display: inline-block;
+            margin-left: 45px;
+            position: relative;
+
+            @media #{$lg} {
+                margin-left: 25px;
+            }
+
+            @media #{$md} {
+                display: block;
+                margin-left: 0;
+            }
+
+            @media #{$xs} {
+                display: block;
+                margin-left: 0;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            & a {
+                font-size: 18px;
+                font-family: $oswald;
+                font-weight: 500;
+                color: $black;
+                @include transition(0.3s);
+                padding: 30px 0;
+
+                @media #{$lg} {
+                    font-size: 16px;
+                }
+
+                @media #{$md} {
+                    font-size: 16px;
+                    padding: 0 10px;
+                    line-height: 40px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    display: block;
+                }
+
+                @media #{$xs} {
+                    font-size: 16px;
+                    padding: 0 10px;
+                    line-height: 40px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    display: block;
+                }
+
+                &.active {
+                    color: $theme-color;
+                }
+            }
+
+            & .bdrop-sub-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 200px;
+                background-color: $white;
+                text-align: left;
+
+                @media #{$md} {
+                    position: relative;
+                    width: 100%;
+                }
+
+                @media #{$xs} {
+                    position: relative;
+                    width: 100%;
+                }
+
+                & li {
+                    margin-left: 0;
+                    display: block;
+
+                    & a {
+                        padding: 8px 20px;
+                        font-size: 16px;
+                        display: block;
+                        border-top: 1px solid rgba(121, 135, 149, 0.4);
+                        position: relative;
+                        z-index: 5;
+
+                        @media #{$md} {
+                            padding: 0 20px;
+                            border-top: 0;
+                        }
+
+                        @media #{$xs} {
+                            padding: 0 20px;
+                            border-top: 0;
+                        }
+                    }
+
+                    &:hover {
+                        & > a {
+                            color: $white;
+                            background-color: $theme-color;
+
+                        }
+                    }
+                }
+            }
+
+            & .sub-toggle {
+                color: $black;
+                font-size: 20px;
+                margin-left: 5px;
+
+                @media #{$md} {
+                    position: absolute;
+                    width: 40px;
+                    height: 42px;
+                    top: -1px;
+                    right: 0;
+                    text-align: center;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    line-height: 40px;
+                    cursor: pointer;
+                }
+
+                @media #{$xs} {
+                    position: absolute;
+                    width: 40px;
+                    height: 42px;
+                    top: -1px;
+                    right: 0;
+                    text-align: center;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    line-height: 40px;
+                    cursor: pointer;
+                }
+            }
+
+            &:hover {
+                & > a {
+                    color: $theme-color;
+                }
+
+                & .sub-toggle {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.bdrop-navigation-btn-icon {
+    & .bdrop-navigation-icon {
+        & li {
+            display: inline-block;
+            margin-left: 15px;
+            position: relative;
+            padding: 30px 0;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            & a {
+                color: $body-color;
+                font-size: 16px;
+            }
+            
+            & .navigation_search{
+                padding: 20px;
+                background-color: $white;
+                z-index: 55;
+                border: 0;
+                width: 300px;
+                right: 0;
+                left: auto;
+                border-radius: 0;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                display: none;
+                @include box-shadow (0px 5px 20px 0px rgba(0, 0, 0, 0.05));
+                
+                @media #{$xs}{
+                    width: 220px;
+                    padding: 10px;
+                }
+
+                & input{
+                    width: 100%;
+                    border: 1px solid $border-color;
+                    height: 50px;
+                    padding: 0 15px;
+                }
+                & button{
+                    width: 50px;
+                    height: 50px;
+                    padding: 0;
+                    color: $body-color;    
+                    border: 0;
+                    background: none;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    
+                    @media #{$xs}{
+                        top: 10px;
+                        right: 10px;
+                    }
+                }
+            }
+
+
+            &:hover {
+                & > a {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+
+    & .bdrop-navigation-btn {
+        padding-left: 15px;
+
+        & .main-btn {
+            font-size: 15px;
+            line-height: 55px;
+            height: 58px;
+            padding: 0 20px;
+        }
+    }
+}
+
+
+/*===== Navigation Transparent ======*/
+
+.bdrop-navigation-transparent {
+    
+    & .bdrop-menu-wrapper {
+
+        & .menu-collapser {
+
+            & .collapse-button {
+
+                & .icon-bar {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+    
+    & .bdrop-menu-bar {
+
+        & .bdrop-main-menu {
+
+            & li {
+                & a {
+                    color: $white;
+
+                    &.active {
+                        color: $theme-color;
+                    }
+                }
+
+                & .bdrop-sub-menu {
+                    background-color: $white;
+                    
+                    & li {
+                        & a {
+                            color: $black;
+                        }
+                        &:hover {
+                            & > a {
+                                color: $white;
+
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .sub-toggle {
+                    color: $white;
+                }
+                &:hover {
+                    & > a {
+                        color: $theme-color;
+                    }
+                    & .sub-toggle {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    & .bdrop-navigation-btn-icon {
+        & .bdrop-navigation-icon {
+            & li {
+                & a {
+                    color: $white;
+                }
+
+                &:hover {
+                    & > a {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.sticky {
+        & .bdrop-menu-wrapper {
+
+            & .menu-collapser {
+
+                & .collapse-button {
+
+                    & .icon-bar {
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+        
+        & .bdrop-menu-bar {
+            & .bdrop-main-menu {
+                & li {
+                    & a {
+                        color: $black;
+
+                        &.active {
+                            color: $theme-color;
+                        }
+                    }
+
+                    & .bdrop-sub-menu {
+                        background-color: $white;
+
+                        & li {
+                            & a {
+                                color: $black;
+                            }
+                            &:hover {
+                                & > a {
+                                    color: $white;
+
+                                    &::before {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .sub-toggle {
+                        color: $black;
+                    }
+                    &:hover {
+                        & > a {
+                            color: $theme-color;
+                        }
+                        & .sub-toggle {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .bdrop-navigation-btn-icon {
+            & .bdrop-navigation-icon {
+                & li {
+                    & a {
+                        color: $black;
+                    }
+
+                    &:hover {
+                        & > a {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.sticky {
+    & .bdrop-menu-bar {
+        & .bdrop-main-menu {
+            & li {
+                & a {
+                    padding: 20px 0;
+
+                    @media #{$md} {
+                        padding: 0 10px;
+                    }
+
+                    @media #{$xs} {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    & .bdrop-navigation-btn-icon {
+        & .bdrop-navigation-btn {
+            & .main-btn {
+                line-height: 45px;
+                height: 48px;
+            }
+        }
+    }
+}

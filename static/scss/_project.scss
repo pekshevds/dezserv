@@ -1,0 +1,374 @@
+
+
+
+/*===========================
+       08.PROJECT css 
+===========================*/
+
+.bdrop-project-area{}
+
+
+.bdrop-project-wrapper{
+    position: relative;
+}
+
+.bdrop-project-image{
+    max-width: 770px;
+    width: 100%;
+    
+    @media #{$md} {
+        max-width: 570px;
+    }
+    
+    & .bdrop-single-project-image{
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+.bdrop-project-content{
+    max-width: 570px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    @include transform(translateY(-50%));
+    background-color: $white;
+    padding: 60px 50px;
+    border-radius: 5px;
+    
+    @media #{$md} {
+        max-width: 470px;
+        padding: 25px 30px;
+    }
+    
+    @media #{$xs}{
+        position: relative;
+        top: 0;
+        @include transform(translateY(0));
+        padding: 10px 15px;
+    }
+    
+    & .bdrop-single-project-content{
+        & .bdrop-project-title{
+            font-size: 32px;
+            font-weight: 500;
+            
+            @media #{$md}{
+                font-size: 22px;
+            }
+            
+            @media #{$xs}{
+                font-size: 22px;
+            }
+        }
+        & .text{
+            margin-top: 18px;
+            
+            @media #{$md}{
+                font-size: 15px;
+            }
+        }
+        & .more{
+            margin-top: 35px;
+            font-size: 15px;
+            color: $body-color;
+            @include transition(0.3s);
+
+            & i{
+                margin-left: 5px;
+            }
+
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+    
+    & .slick-arrow{
+        position: absolute;
+        top: -155px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $black;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+/*===== PROJECT 2 =====*/
+
+.bdrop-project-area-2{
+    position: relative;
+    z-index: 9;
+    
+    
+    & .bdrop-project-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: rgba(0, 0, 0, 0.9);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+
+.bdrop-single-project-items{
+    position: relative;
+    overflow: hidden;
+    
+    & .bdrop-project-items-image{
+        & img{
+            width: 100%;
+        }
+    }
+    & .bdrop-project-items-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65);
+        @include transition(0.3s);
+        opacity: 0;
+        visibility: hidden;
+        
+        & .main-btn{
+            border: 2px solid $white;
+            background-color: $black;
+            color: $white;
+            height: 55px;
+            padding: 0 35px;
+            line-height: 50px;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, 0%));
+            opacity: 0;
+            
+            & i{
+                margin-left: 10px;
+            }
+        }
+        & .project-title{
+            position: absolute;
+            left: 30px;
+            bottom: 45px;
+            @include transform(translateX(-100%));
+            @include transition(0.3s);
+            opacity: 0;
+            
+            & a{
+                font-size: 24px;
+                font-weight: 500;
+                color: $white;
+                @include transition(0.3s);
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    
+    &:hover{
+        & .bdrop-project-items-content{
+            opacity: 1;
+            visibility: visible;
+            
+            & .main-btn{
+                @include transform(translate(-50%, -50%));
+                opacity: 1;
+            }
+            & .project-title{
+                @include transform(translateX(0%));
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.bdrop-project-items-active{
+    & .slick-arrow{
+        position: absolute;
+        top: -80px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $white;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        @media #{$xs}{
+            top: -40px;
+        }
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+/*===== PROJECT 3 =====*/
+
+.bdrop-project-area-3{
+    position: relative;
+    z-index: 9;
+    
+    &::before{
+        position: absolute;
+        content: '';
+        background-color: rgba(34, 34, 34, 0.9);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+.bdrop-single-project-3{
+    & .bdrop-project-image-3{
+        & img{
+            width: 100%;
+            border-radius: 5px;
+            height: 490px;
+            object-fit: cover;
+            object-position: center;
+            
+            @media #{$xs}{
+                height: 350px;
+            }
+            @media #{$sm}{
+                height: 300px;
+            }
+        }
+    }
+    & .bdrop-project-content-3{
+        & .bdrop-project-title{
+            & a{
+                color: $white;
+                font-weight: 500;
+                font-size: 32px;
+                margin-top: 25px;
+                @include transition(0.3s);
+                
+                @media #{$lg}{
+                    font-size: 30px;
+                }
+                @media #{$xs}{
+                    font-size: 22px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+            
+            &.title-2{
+                & a{
+                    color: $black;
+
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bdrop-project-active-3 {
+    & .slick-arrow{
+        position: absolute;
+        top: -80px;
+        right: 0;
+        z-index: 9;
+        width: 50px;
+        height: 24px;
+        line-height: 24px;
+        color: $white;
+        text-align: center;
+        cursor: pointer;
+        @include transition(0.3s);
+        
+        @media #{$xs}{
+            top: -40px;
+        }
+        
+        &:hover{
+            color: $theme-color;
+        }
+        
+        &.prev{
+            right: 50px;
+            font-size: 20px;
+            border-right: 1px solid #d1d1d1;
+        }
+        
+        &.next{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
