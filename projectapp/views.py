@@ -85,6 +85,16 @@ def show_aeration(request):
 
 	return render(request, 'projectapp/aeration.html', context)
 
+def show_fumigation(request):
+
+	table = get_table(category='FU')	
+
+	context = {
+        'page_object': 	table,
+    }
+
+	return render(request, 'projectapp/fumigation.html', context)
+
 
 def show_projects(request):
 

@@ -22,6 +22,7 @@ urlpatterns = [
 	path('disinfection/', 		show_disinfection, 	name='show_disinfection'),#Дезинфекция
 	path('pestcontrol', 		show_pestcontrol, 	name='show_pestcontrol'),#Дезинсекция
 	path('aeration/', 			show_aeration, 		name='show_aeration'),#Газация
+	path('fumigation/', 		show_fumigation, 	name='show_fumigation'),#Фумигация
 	path('projects/', 			show_projects, 		name='show_projects'),
 	path('about/', 				show_about, 		name='show_about'),
 	path('contacts/', 			show_contacts, 		name='show_contacts'),

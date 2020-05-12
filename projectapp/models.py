@@ -24,12 +24,14 @@ class Project(models.Model):
 	disinfection 	= 'DF'
 	pestcontrol 	= 'PC'
 	aeration 		= 'AE'
+	fumigation		= 'FU'
     
 	SHOW_CHOICES = (
 		(pesticide, 	'Дератизация'),
         (disinfection, 	'Дезинфекция'),
         (pestcontrol, 	'Дезинсекция'),
         (aeration, 		'Газация'),
+        (fumigation, 	'Фумигация'),
     )
 
 	slug 					= models.SlugField(max_length=36, verbose_name='Url', blank=True, db_index=True)
